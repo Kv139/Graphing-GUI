@@ -10,18 +10,7 @@ import Vector_fields3d
 
 
 
-class Window(tk.Toplevel):
-    def __init__(self, parent):
-        super().__init__(parent)
-
-        self.geometry('300x100')
-        self.title('Toplevel Window')
-
-        ttk.Button(self,
-                text='Close',
-                command=self.destroy).pack(expand=True)
-
-
+        
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -29,14 +18,16 @@ class App(tk.Tk):
         self.geometry('300x200')
         self.title('Graph Generator Main')
 
-        
         ttk.Button(self,
                 text='ODE Grapher',
                 command=self.open_window).pack(expand=True)
-
         ttk.Button(self,
             text='3D Vector Field Grapher',
             command=self.open_window2).pack(expand=True)
+        ttk.Button(self,
+            text='Close',
+            command=self.destroy).pack(expand=True)   
+
         
 
     def open_window(self):
@@ -44,7 +35,8 @@ class App(tk.Tk):
 
     def open_window2(self):
         window = Vector_fields3d.create_window()
-
+   
+    
 
 
 if __name__ == "__main__":

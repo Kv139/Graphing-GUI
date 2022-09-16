@@ -39,7 +39,7 @@ def generate_graph(function1, function2, function3):
 def create_window():
     win = Tk()
     win.title("3D Vector Fields")
-    win.geometry("500x400")
+    win.geometry("400x300")
     win.configure(background="pink")
   
     def graph_system():
@@ -67,10 +67,13 @@ def create_window():
 
 
     entry0.pack()
-    entry0.place(x=400, y=20)
-    entry2.place(x=400, y=95)
-    entry3.place(x=400, y=170)
+    entry0.place(x=250, y=20)
+    entry2.place(x=250, y=95)
+    entry3.place(x=250, y=170)
 
     but = ttk.Button(win, text="Generate Graph", width=20, command=graph_system)
     but.place(x=10, y=220)
+
+    exit_button = Button(win, text="Exit", command=win.destroy, width=15)
+    exit_button.place(x=250,y=250)
     win.mainloop()
