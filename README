@@ -1,0 +1,2 @@
+This is a gui interface using tkinter, numpy, and matplot library to generate vector fields in 3D along with 2D 
+vector fields made to model specific circumstances of harmonic dampening. 
